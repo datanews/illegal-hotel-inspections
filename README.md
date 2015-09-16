@@ -1,11 +1,13 @@
 # Illegal Hotel Inspections
 
-Through a Freedom of Information request, WNYC obtained records of inspections made between October 2013 through April 2015 by the Office of Special Enforcement of the Mayor's Office looking for illegal, short term rentals that violate local laws.
+Through a Freedom of Information request, WNYC obtained records from the Mayor's Office of Special Enforcement of 2,684 inspections looking for illegal short-term rental activity in New York City. The inspections occurred from October 2013 through April 2015.
 
-**This data is only inspections and does not necessarily equate to actual wrong-doing.**
+The inspection reports include information about the property being inspected, the reason for the inspection, and any violations found.
 
-The repository includes a parsed CSV of that data as `inspections.csv`.  The data originally came as a set of Microsoft Word documents (see `report-screenshot.png` for example).  These were converted to HTML and then each report was parsed out into the CSV where each row is a report.
+**This data only contains inspection reports, not proof of actual wrong-doing.**
 
-All data was parsed from the original document besides all the Apparent Person In Charge (APIC) fields excluding the *Sex* and *Race* fields. A few auxiliary fields were added for easier analysis.
+The data originally came as a set of Microsoft Word documents (see report-screenshot.png for example). These were converted to HTML and then each report was parsed for its contents.  We disregarded 193 reports of inspections that were for something other than short-term rental activity.
 
-Once parsed, we manually removed rows that were obviously not related to illegal hotels.  The original number of reports was 2,877 and our curated list is 2,684.
+In `inspections.csv`, each row contains data on one inspection.  Some cells contain newline characters.
+
+Personal information regarding the Apparent Person In Charge (APIC) is not included except for the sex and race fields.
